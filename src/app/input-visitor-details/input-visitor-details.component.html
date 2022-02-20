@@ -1,0 +1,24 @@
+<div class="container">  
+    <form id="contact" action="" method="post" [formGroup]="userForm">
+      <h3>Add Form</h3>
+      <fieldset>
+        <label>Name: </label>
+        <input formControlName="name" placeholder="Name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <label>Address:</label>
+        <input formControlName="address" placeholder="Address" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        Email:
+        <input formControlName="email" placeholder="Email" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        Phone:
+        <input formControlName="phone" placeholder="Phone" type="tel" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <button (click)="submitData()" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
