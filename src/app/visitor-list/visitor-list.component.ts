@@ -20,15 +20,13 @@ export class VisitorListComponent implements OnInit {
         this.user = result
         console.log('user', result)
       })
-
-      // deleteUser(id): void {
-      //   this.userService.deleteUser(this.id).subscribe(result => {
-      //     this.user = result
-      //     console.log('del', result)
-      //   })
-      // }
-  
 }
 
+deleteUser(id: string): void {
+  this.userService.deleteUser(id).subscribe(result => {
+    this.user = result
+    console.log(result)
+  })
+}
 }
 

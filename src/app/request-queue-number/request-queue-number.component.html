@@ -1,18 +1,26 @@
-<div>
-    <h1>HOSPITAL</h1>
+<!-- <div class="body">
+    <div class="card" id="print-section">
+        <h1>Healthy Hospital</h1>
+        <hr>
+        <h2>Queue Number :</h2>
+        {{data.queueNumber}}
+        {{data.name}}
+        <hr>
+        <p>Budayakan mengantri</p>
+        <p>Terima kasih atas kunjungan anda</p>
+      </div>    
+</div> -->
+
+<div class="card" id="sectionToPrint">
+    <h1>Healthy Hospital</h1>
     <hr>
     <h2>Queue Number :</h2>
     {{data.queueNumber}}
     {{data.name}}
-    {{data.id}}
-    {{data.email}}
     <hr>
     <p>Budayakan mengantri</p>
     <p>Terima kasih atas kunjungan anda</p>
 </div>
-<div>
-    <button mat-button>Okay</button>
+<div class="printButton">
+    <button mat-button type="button" (click)="onPrint('sectionToPrint')" value="Print" >Print</button>
 </div>
-{{data | json}}
-
-

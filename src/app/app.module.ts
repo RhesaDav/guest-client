@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import {NgxPrintModule} from 'ngx-print'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPrintModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

@@ -1,67 +1,13 @@
 <table>
     <tr *ngFor="let data of user">
-      <td>{{data.name}}</td>
+        <td>{{data.name}}</td>
       <td>{{data.address}}</td>
       <td>{{data.phone}}</td>
       <td>{{data.email}}</td>
       <td>{{data.queueNumber}}</td>
       <td>
-      <button mat-button routerLink="{{data._id}}">Detail</button>
-      <button mat-button >Delete</button>
+      <button mat-button routerLink="{{data._id}}">Print</button>
+      <button mat-button (click)="deleteUser(data.id)">Delete</button>
       </td>
     </tr>
   </table>
-
-
-
-  <div class="container">
-
-    <h1>Angular 12 CRUD Example - ItSolutionStuff.com</h1>
-
-  
-
-    <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a>
-
-    
-
-    <table class="table table-bordered">
-
-      <tr>
-
-        <th>ID</th>
-
-        <th>Title</th>
-
-        <th>Body</th>
-
-        <th width="220px">Action</th>
-
-      </tr>
-
-      <tr *ngFor="let post of user">
-
-        <td>{{ post.queueNumber }}</td>
-
-        <td>{{ post.name }}</td>
-
-        <td>{{ post.address }}</td>
-
-        <td>{{post.email}}</td>
-
-        <td>{{post.phone}}</td>
-
-        <td>
-
-          <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info">View</a>
-
-          <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>
-
-          <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
-
-        </td>
-
-      </tr>
-
-    </table>
-
- </div>

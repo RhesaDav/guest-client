@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 
+
 @Component({
   selector: 'app-request-queue-number',
   templateUrl: './request-queue-number.component.html',
@@ -33,4 +34,12 @@ export class RequestQueueNumberComponent implements OnInit {
       console.log(this.data)
     })
   }
+
+  onPrint(divName) {
+    const printContents = document.getElementById(divName).innerHTML;
+    const originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
 }
