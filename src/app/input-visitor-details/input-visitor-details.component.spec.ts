@@ -8,9 +8,9 @@ describe('InputVisitorDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputVisitorDetailsComponent ]
+      declarations: [InputVisitorDetailsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

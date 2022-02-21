@@ -7,10 +7,10 @@ import { RequestQueueNumberComponent } from './request-queue-number/request-queu
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
 
 const routes: Routes = [
-  {path: '', component: MenuComponent},
-  {path: 'visitor-list/:id', component: RequestQueueNumberComponent},
-  {path: 'input-visitor-details', component: InputVisitorDetailsComponent},
-  {path: 'visitor-list', component: VisitorListComponent},
+  { path: '', component: MenuComponent },
+  { path: 'visitor-list/:id', component: RequestQueueNumberComponent },
+  { path: 'input-visitor-details', component: InputVisitorDetailsComponent },
+  { path: 'visitor-list', component: VisitorListComponent },
 ];
 
 @NgModule({

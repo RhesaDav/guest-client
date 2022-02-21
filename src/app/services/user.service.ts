@@ -11,18 +11,15 @@ const port = environment.port
 })
 export class UserService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getUserData(): Observable<any> {
     return this.http.get(`${port}/users`)
   }
   createUser(data: any): Observable<any> {
-    return this.http.post<any>(`${port}/users`, data )
+    return this.http.post<any>(`${port}/users`, data)
   }
   getDetailUser(id): Observable<any> {
     return this.http.get(`${port}/users/${id}`)
-  }
-  deleteUser(id): Observable<any>{
-    return this.http.delete(`${port}/users/${id}`)
   }
 }

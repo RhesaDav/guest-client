@@ -9,24 +9,16 @@ import { UserService } from '../services/user.service'
 })
 export class VisitorListComponent implements OnInit {
 
-  @ViewChild("myModalInfo", {static: false}) myModalInfo: TemplateRef<any>;
-
-  constructor(private userService:UserService) { }
-  user: User[]=[]
+  constructor(private userService: UserService) { }
+  user: User
   id: any
 
   ngOnInit(): void {
-      this.userService.getUserData().subscribe(result => {
-        this.user = result
-        console.log('user', result)
-      })
-}
+    this.userService.getUserData().subscribe(result => {
+      this.user = result
+    })
+  }
 
-deleteUser(id: string): void {
-  this.userService.deleteUser(id).subscribe(result => {
-    this.user = result
-    console.log(result)
-  })
-}
+
 }
 

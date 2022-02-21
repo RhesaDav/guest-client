@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import {NgxPrintModule} from 'ngx-print'
+import { NgxPrintModule } from 'ngx-print'
 
 @NgModule({
   declarations: [

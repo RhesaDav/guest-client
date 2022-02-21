@@ -114,4 +114,4 @@ const MY_FORMATS = {
 		{ provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
 	],
 })
-export class MaterialModule {}
+export class MaterialModule { }

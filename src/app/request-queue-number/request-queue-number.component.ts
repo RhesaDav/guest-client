@@ -10,7 +10,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./request-queue-number.component.css']
 })
 export class RequestQueueNumberComponent implements OnInit {
-  userId: string[]=[]
+  userId: string[] = []
   id: any
   data: User = {
     id: '',
@@ -20,9 +20,9 @@ export class RequestQueueNumberComponent implements OnInit {
     phone: '',
     queueNumber: ''
   }
-  
 
-  constructor(private userService:UserService, private route:ActivatedRoute, private router:Router) { }
+
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getUserDetail(this.route.snapshot.paramMap.get('id'))
@@ -31,7 +31,6 @@ export class RequestQueueNumberComponent implements OnInit {
   getUserDetail(id): void {
     this.userService.getDetailUser(id).subscribe(data => {
       this.data = data.data
-      console.log(this.data)
     })
   }
 
@@ -41,5 +40,5 @@ export class RequestQueueNumberComponent implements OnInit {
     document.body.innerHTML = printContents;
     window.print();
     document.body.innerHTML = originalContents;
-}
+  }
 }

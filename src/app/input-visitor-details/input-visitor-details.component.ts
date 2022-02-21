@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class InputVisitorDetailsComponent implements OnInit {
   userForm: FormGroup
 
-  constructor(private userService:UserService, private formBuilder:FormBuilder, private router:Router) { }
+  constructor(private userService: UserService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this._formInit()
@@ -19,8 +19,8 @@ export class InputVisitorDetailsComponent implements OnInit {
 
   private _formInit() {
     this.userForm = this.formBuilder.group({
-      name: new FormControl('',Validators.required),
-      address: new FormControl('',Validators.required),
+      name: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
       queueNumber: new FormControl('', Validators.required)
@@ -36,9 +36,7 @@ export class InputVisitorDetailsComponent implements OnInit {
       queueNumber: this.userForm.value.queueNumber
     }
 
-    console.log('newUser', newUser)
     this.userService.createUser(newUser).subscribe((result) => {
-      console.log('result nya', result)
     })
   }
 
